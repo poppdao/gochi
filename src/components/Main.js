@@ -11,9 +11,9 @@ const Main = ({onChangeAddress, onSubmit, loading}) => {
           </svg>
         </span>
         <div className="max-w-2xl mx-auto">
-          <span className="inline-block mb-10 etxt-sm text-blue-400 font-semibold">Prove of Play Protocol</span>
+          <span className="inline-block mb-10 etxt-sm text-blue-400 font-semibold">Prove of Play Protocol (a.k.a 🍿 POPP)</span>
           <h2 className="mb-10 text-4xl font-semibold font-heading">🍿 POPP Score</h2>
-          <p className="mb-16 text-lg text-gray-500">Prove of Play Protocol (a.k.a 🍿 POPP) will given accountable Score base on your online activities</p>
+          <p className="mb-16 text-lg text-gray-500">Given accountable score base on your 👻 <a className="text-purple-500" href="https://polygonscan.com/address/0x86935f11c86623dec8a25696e1c19a8659cbf95d" target="_blank" rel="noreferrer">Aavegochi</a> on-chain activities</p>
           <form action="#">
             <div className="flex flex-wrap items-center md:flex-nowrap">
               <div className="relative w-full lg:w-2/2 pb-4 flex flex-wrap mb-6 md:mb-0 md:mr-4">
