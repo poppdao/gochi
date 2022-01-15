@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/gochi/static/css/main.7c046e12.css",
-    "main.js": "/gochi/static/js/main.8ae048cb.js",
+    "main.js": "/gochi/static/js/main.d8ab46d4.js",
     "static/js/787.2c0d033d.chunk.js": "/gochi/static/js/787.2c0d033d.chunk.js",
     "index.html": "/gochi/index.html",
     "main.7c046e12.css.map": "/gochi/static/css/main.7c046e12.css.map",
-    "main.8ae048cb.js.map": "/gochi/static/js/main.8ae048cb.js.map",
+    "main.d8ab46d4.js.map": "/gochi/static/js/main.d8ab46d4.js.map",
     "787.2c0d033d.chunk.js.map": "/gochi/static/js/787.2c0d033d.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.7c046e12.css",
-    "static/js/main.8ae048cb.js"
+    "static/js/main.d8ab46d4.js"
   ]
 }
