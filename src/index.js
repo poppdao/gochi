@@ -1,12 +1,24 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { defaultChains, Provider } from 'wagmi'
+import { InjectedConnector } from 'wagmi/connectors/injected'
+
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+
+const connectors = ({ chainId }) => {
+  return [
+    new InjectedConnector({ chains: defaultChains }),
+  ]
+}
+
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Provider autoConnect connectors={connectors}>
+      <App />
+    </Provider>
   </React.StrictMode>,
   document.getElementById('root')
 );

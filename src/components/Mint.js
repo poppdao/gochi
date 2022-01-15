@@ -1,6 +1,32 @@
+import { useAccount, useConnect, useNetwork } from 'wagmi'
+import _omit from 'lodash/omit'
+
+import { shortenString } from '../helpers/address'
+
 import { countScore } from '../helpers/score';
 
 const Mint = ({scores}) => {
+  const [{ data: connectData }, connect] = useConnect()
+  const [{ data: networkData }, switchNetwork] = useNetwork()
+  const [{ data: accountData, error }, disconnect] = useAccount({
+    fetchEns: true,
+  })
+
+  const account = accountData?.address
+  const ButtonContent = account ? 'Mint POPP' : 'Connect'
+
+  const onAction = async (e) => {
+    e.preventDefault()
+    if (account) {
+      const data = JSON.stringify(_omit(scores, ['hash']))
+      const hash = scores.hash
+      console.log('call mint contract...', data, hash)
+    } else {
+      console.log('connecting...', connectData, networkData, accountData)
+      connect()
+    }
+  }
+
   const poppScore = countScore(scores)
   return (
     <section className="relative py-20">
@@ -80,7 +106,8 @@ const Mint = ({scores}) => {
               <div className="bg-white p-12 h-full rounded-xl text-center">
                 <span className="inline-block mb-4 px-3 py-1 bg-red-50 rounded">
                   <h3 className="text-xs font-semibold text-red-500">
-                    0xaabb....ccdd
+                    {error && <div>{error?.message ?? 'Failed to connect'}</div>}
+                    {account ? shortenString(account) : ''}
                   </h3>
                 </span>
                 <p className="mb-6 lg:mb-12 text-gray-500">POPP Score</p>
@@ -93,8 +120,9 @@ const Mint = ({scores}) => {
                 <a
                   className="block mb-4 py-4 text-sm text-center font-medium leading-normal text-white bg-red-400 hover:bg-red-300 rounded transition duration-200"
                   href="#"
+                  onClick={onAction}
                 >
-                  Mint POPP
+                  {ButtonContent}
                 </a>
                 <p className="text-gray-500">On Polygon Mumbai</p>
               </div>

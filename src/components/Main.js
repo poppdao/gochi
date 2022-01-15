@@ -1,3 +1,5 @@
+import ReactLoading from 'react-loading';
+
 const Main = ({onChangeAddress, onSubmit, loading}) => {
   return (
     <section className="relative py-20">
@@ -21,7 +23,7 @@ const Main = ({onChangeAddress, onSubmit, loading}) => {
                 <span className="absolute top-0 left-0 ml-4 -mt-2 px-1 inline-block bg-white text-gray-500 text-xs">Address</span>
               </div>
             </div>
-            <button className="w-full lg:w-1/5 py-4 px-6 text-sm text-white font-medium leading-normal bg-red-400 hover:bg-red-300 rounded transition duration-200" onClick={onSubmit} disabled={loading}>Get Score</button>
+            <button className="w-full lg:w-1/5 py-4 px-6 text-sm text-white font-medium leading-normal bg-red-400 hover:bg-red-300 rounded transition duration-200" onClick={onSubmit} disabled={loading}>{loading ? <ReactLoading type={'spinningBubbles'} color={'white'} height={'20%'} width={'20%'} /> : 'Get Score'}</button>
           </form>
         </div>
       </div>

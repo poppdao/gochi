@@ -37,7 +37,7 @@ const Report = ({scores: scoresRaw}) => {
     <div className="max-w-4xl mx-auto">
       <ul className="space-y-4">
         {Object.keys(scores).map((key) => (
-          <li className="p-12 border rounded-lg">
+          <li key={key} className="p-12 border rounded-lg">
             <button className="w-full flex justify-between items-center text-left font-semibold font-heading">
               <span className="text-2xl font-semibold font-heading">
                 {DATA[key]?.title}: {scores[key]}
