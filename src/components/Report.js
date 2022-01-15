@@ -1,4 +1,37 @@
+const DATA = {
+  votes: {
+    "title": "Vote in DAO",
+    "description": "Rank via vote numbers in Aavegochi snapshot",
+  },
+  gochi: {
+    "title": "Gochi",
+    "description": "Rank via gochi numbers",
+  },
+  avg_xp: {
+    "title": "Average XP",
+    "description": "Rank via gochi's average XP",
+  },
+  avg_kinship: {
+    "title": "Average kinship",
+    "description": "Rank via gochi's average kinship",
+  },
+  parcels: {
+    "title": "Parcels",
+    "description": "Rank via owned parcels",
+  },
+  GHST: {
+    "title": "GHST",
+    "description": "Rank via owned GHST token",
+  },
+  rank: {
+    "title": "Ranking",
+    "description": "Verdit the certificate",
+  }
+}
+
 const Report = ({scores}) => {
+  delete scores.hash
+  delete scores.rank
   return (
     <div className="max-w-4xl mx-auto">
       <ul className="space-y-4">
@@ -6,7 +39,7 @@ const Report = ({scores}) => {
           <li className="p-12 border rounded-lg">
             <button className="w-full flex justify-between items-center text-left font-semibold font-heading">
               <span className="text-2xl font-semibold font-heading">
-                {key}: {scores[key]}
+                {DATA[key].title}: {scores[key]}
               </span>
               <svg
                 className="flex-shrink-0"
@@ -35,7 +68,7 @@ const Report = ({scores}) => {
               </svg>
             </button>
             <p className="mt-4 max-w-2xl text-gray-500 leading-loose">
-              ...
+              {DATA[key].description}
             </p>
           </li>
         ))}
