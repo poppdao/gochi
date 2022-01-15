@@ -1,4 +1,4 @@
-# P.O.P.P Score for NFTHack
+# P.O.P.P Gochi Score for NFTHack
 
 P.O.P.P (Prove of play protocol) Score is a Hackthon project that given user an accountable Score base on on-chain play activities.
 
