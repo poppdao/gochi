@@ -1,3 +1,5 @@
+import _omit from 'lodash/omit'
+
 const DATA = {
   votes: {
     "title": "Vote in DAO",
@@ -29,9 +31,8 @@ const DATA = {
   }
 }
 
-const Report = ({scores}) => {
-  delete scores.hash
-  delete scores.rank
+const Report = ({scores: scoresRaw}) => {
+  const scores = _omit(scoresRaw, ['hash', 'rank'])
   return (
     <div className="max-w-4xl mx-auto">
       <ul className="space-y-4">
@@ -39,7 +40,7 @@ const Report = ({scores}) => {
           <li className="p-12 border rounded-lg">
             <button className="w-full flex justify-between items-center text-left font-semibold font-heading">
               <span className="text-2xl font-semibold font-heading">
-                {DATA[key].title}: {scores[key]}
+                {DATA[key]?.title}: {scores[key]}
               </span>
               <svg
                 className="flex-shrink-0"
@@ -68,7 +69,7 @@ const Report = ({scores}) => {
               </svg>
             </button>
             <p className="mt-4 max-w-2xl text-gray-500 leading-loose">
-              {DATA[key].description}
+              {DATA[key]?.description}
             </p>
           </li>
         ))}

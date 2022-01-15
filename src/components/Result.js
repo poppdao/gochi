@@ -1,8 +1,16 @@
+import { useState, useMemo } from 'react'
 import Report from './Report'
+import Mint from './Mint'
+import { countScore } from '../helpers/score';
 
 const Result = ({scores}) => {
+  const [showMint, setShowMint] = useState(false)
+  const onClickReport = () => setShowMint(false)
+  const onClickMint = () => setShowMint(true)
+
+  const poppScore = useMemo(() => countScore(scores), [scores])
   // console.log(scores)
-  const poppScore = Object.values(scores).reduce((prev, cur) => typeof cur === 'string' ? prev : prev + cur, 0)
+
   return (
     <section className="relative py-20">
       <img
@@ -26,7 +34,7 @@ const Result = ({scores}) => {
         <div className="max-w-4xl mx-auto mb-12">
           <div className="flex flex-wrap -mx-4">
             <div className="w-full md:w-1/3 lg:w-1/5 mb-6 lg:mb-0 px-4">
-              <button className="w-full py-6 rounded-xl bg-red-400">
+              <button className="w-full py-6 rounded-xl bg-red-400" onClick={onClickReport}>
                 <svg
                   className="mx-auto mb-5"
                   width={28}
@@ -65,7 +73,7 @@ const Result = ({scores}) => {
               </button>
             </div>
             <div className="w-full md:w-1/3 lg:w-1/5 mb-6 lg:mb-0 px-4">
-              <button className="w-full py-6 rounded-xl bg-gray-50 hover:bg-gray-100">
+              <button className="w-full py-6 rounded-xl bg-gray-50 hover:bg-gray-100" onClick={onClickMint}>
               <svg
                 className="mx-auto mb-5"
                 width={28}
@@ -112,7 +120,10 @@ const Result = ({scores}) => {
             </div>
           </div>
         </div>
-        <Report scores={scores} />
+        {showMint
+        ? <Mint scores={scores} />
+        : <Report scores={scores} />
+        }
       </div>
     </section>
   )
