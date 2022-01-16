@@ -7,10 +7,10 @@ import { countScore } from '../helpers/score';
 
 const RankingNFT = {
   'Souless': 'nft/corn.png',
-  'Babygotchi': 'nft/corn2.png',
+  'Babygochi': 'nft/corn2.png',
   'Rookie': 'nft/corn3.png',
-  'GotchiGang': 'nft/popcorn.png',
-  'GotchiBosss': 'nft/vending.png',
+  'Gotchigang': 'nft/popcorn.png',
+  'Gotchibosss': 'nft/vending.png',
   'GotchiOG': 'nft/popcorncar2.png',
   'GotchiMaster': 'nft/popcorncar2.png',
   'GotchiZEN': 'nft/popcorncar2.png',
