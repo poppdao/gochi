@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/gotchi/static/css/main.20a2a9e9.css",
-    "main.js": "/gotchi/static/js/main.0399ddee.js",
+    "main.css": "/gotchi/static/css/main.ca6fb301.css",
+    "main.js": "/gotchi/static/js/main.213fe9d3.js",
     "static/js/787.2c0d033d.chunk.js": "/gotchi/static/js/787.2c0d033d.chunk.js",
     "index.html": "/gotchi/index.html",
-    "main.20a2a9e9.css.map": "/gotchi/static/css/main.20a2a9e9.css.map",
-    "main.0399ddee.js.map": "/gotchi/static/js/main.0399ddee.js.map",
+    "main.ca6fb301.css.map": "/gotchi/static/css/main.ca6fb301.css.map",
+    "main.213fe9d3.js.map": "/gotchi/static/js/main.213fe9d3.js.map",
     "787.2c0d033d.chunk.js.map": "/gotchi/static/js/787.2c0d033d.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.20a2a9e9.css",
-    "static/js/main.0399ddee.js"
+    "static/css/main.ca6fb301.css",
+    "static/js/main.213fe9d3.js"
   ]
 }
