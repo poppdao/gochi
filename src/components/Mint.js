@@ -39,7 +39,9 @@ const Mint = ({scores}) => {
       const data = JSON.stringify(_omit(scores, ['hash']))
       const hash = scores.hash
       console.log('call mint contract...', data, hash)
-      alert('hack in progress, leave comment in https://github.com/poppdao/gotchi')
+      const TBD = 'hack in progress, leave comment in https://github.com/poppdao/gotchi'
+      console.warn(TBD)
+      alert(TBD)
     } else {
       connect(connectData.connectors[0])
       console.log('connecting...', networkData, accountData)
