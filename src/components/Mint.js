@@ -6,10 +6,10 @@ import { shortenString } from '../helpers/address'
 import { countScore } from '../helpers/score';
 
 const RankingNFT = {
-  'soulless': 'nft/corn.png',
+  'Souless': 'nft/corn.png',
   'Babygotchi': 'nft/corn2.png',
   'Rookie': 'nft/corn3.png',
-  'Gotchigang': 'nft/popcorn.png',
+  'GotchiGang': 'nft/popcorn.png',
   'GotchiBosss': 'nft/vending.png',
   'GotchiOG': 'nft/popcorncar2.png',
   'GotchiMaster': 'nft/popcorncar2.png',
