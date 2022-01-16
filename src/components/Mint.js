@@ -5,6 +5,17 @@ import { shortenString } from '../helpers/address'
 
 import { countScore } from '../helpers/score';
 
+const RankingNFT = {
+  'soulless': 'nft/corn.png',
+  'Babygotchi': 'nft/corn2.png',
+  'Rookie': 'nft/corn3.png',
+  'Gotchigang': 'nft/popcorn.png',
+  'GotchiBosss': 'nft/vending.png',
+  'GotchiOG': 'nft/popcorncar2.png',
+  'GotchiMaster': 'nft/popcorncar2.png',
+  'GotchiZEN': 'nft/popcorncar2.png',
+}
+
 const Mint = ({scores}) => {
   const [{ data: connectData }, connect] = useConnect()
   const [{ data: networkData }, switchNetwork] = useNetwork()
@@ -118,10 +129,11 @@ const Mint = ({scores}) => {
               </span>
               <p className="mb-6 lg:mb-12 text-gray-500">POPP Score</p>
               <div className="flex justify-center mb-12">
-                <span className="self-start inline-block mr-1 text-xl font-semibold text-gray-500">
+                {/* <span className="self-start inline-block mr-1 text-xl font-semibold text-gray-500">
                 🍿
                 </span>
-                <p className="self-end text-5xl font-semibold font-heading">{poppScore}</p>
+                <p className="self-end text-5xl font-semibold font-heading">{poppScore}</p> */}
+                <img src={`${RankingNFT[scores.rank]}`} alt="" />
               </div>
               <a
                 className="block mb-4 py-4 text-sm text-center font-medium leading-normal text-white bg-red-400 hover:bg-red-300 rounded transition duration-200"

@@ -3,11 +3,11 @@ import _omit from 'lodash/omit'
 const DATA = {
   votes: {
     "title": "Vote in DAO",
-    "description": "Rank via vote numbers in Aavegotchi snapshot",
+    "description": "Rank via voting count in Aavegotchi snapshot",
   },
   gotchi: {
     "title": "Gotchi",
-    "description": "Rank via Gotchi numbers",
+    "description": "Rank via owned Gotchi amount",
   },
   avg_xp: {
     "title": "Average XP",
