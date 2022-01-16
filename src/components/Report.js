@@ -2,28 +2,28 @@ import _omit from 'lodash/omit'
 
 const DATA = {
   votes: {
-    "title": "Vote in DAO",
-    "description": "Rank via voting count in Aavegotchi snapshot",
+    "title": "Votes in DAO",
+    "description": "Evaluate user's involvements with DAO",
   },
   gotchi: {
     "title": "Gotchi",
-    "description": "Rank via owned Gotchi amount",
+    "description": "Assets holding score base on total holding Gotchi numbers",
   },
   avg_xp: {
     "title": "Average XP",
-    "description": "Rank via Gotchi's average XP",
+    "description": "Evaluate user's engagements with games and community activities base on average XP of total holding Gotchis",
   },
   avg_kinship: {
     "title": "Average kinship",
-    "description": "Rank via Gotchi's average kinship",
+    "description": "Evaluate user's engagements with games base on average kinship of total holding Gotchis",
   },
   parcels: {
     "title": "Parcels",
-    "description": "Rank via owned parcels",
+    "description": "Assets holding score base on owned parcels",
   },
   GHST: {
     "title": "GHST",
-    "description": "Rank via owned GHST token",
+    "description": "Assets holding score base on staking GHST token",
   },
   rank: {
     "title": "Ranking",
