@@ -40,8 +40,8 @@ const Mint = ({scores}) => {
       const hash = scores.hash
       console.log('call mint contract...', data, hash)
     } else {
-      console.log('connecting...', connectData, networkData, accountData)
-      connect()
+      connect(connectData.connectors[0])
+      console.log('connecting...', networkData, accountData)
     }
   }
 
@@ -127,12 +127,8 @@ const Mint = ({scores}) => {
                   {account ? shortenString(account) : ''}
                 </h3>
               </span>
-              <p className="mb-6 lg:mb-12 text-gray-500">POPP Score</p>
+              <p className="mb-6 lg:mb-12 text-gray-500">{scores.rank} 🍿{poppScore}</p>
               <div className="flex justify-center mb-12">
-                {/* <span className="self-start inline-block mr-1 text-xl font-semibold text-gray-500">
-                🍿
-                </span>
-                <p className="self-end text-5xl font-semibold font-heading">{poppScore}</p> */}
                 <img src={`${RankingNFT[scores.rank]}`} alt="" />
               </div>
               <a
