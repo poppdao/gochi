@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { defaultChains, Provider } from 'wagmi'
+import { chain, Provider } from 'wagmi'
 import { InjectedConnector } from 'wagmi/connectors/injected'
 
 import './index.css';
@@ -10,7 +10,7 @@ import reportWebVitals from './reportWebVitals';
 
 const connectors = ({ chainId }) => {
   return [
-    new InjectedConnector({ chains: defaultChains }),
+    new InjectedConnector({ chains: [chain.polygonMainnet, chain.polygonTestnetMumbai] }),
   ]
 }
 

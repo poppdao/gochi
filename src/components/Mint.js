@@ -1,4 +1,4 @@
-import { useAccount, useConnect, useNetwork } from 'wagmi'
+import { chain, useAccount, useConnect, useNetwork } from 'wagmi'
 import _omit from 'lodash/omit'
 
 import { shortenString } from '../helpers/address'
@@ -18,6 +18,13 @@ const Mint = ({scores}) => {
   const onAction = async (e) => {
     e.preventDefault()
     if (account) {
+      console.log(networkData)
+      // if not right network
+      // window.ethereum.request({
+      //   method: 'wallet_addEthereumChain',
+      //   params: [chain.polygonTestnetMumbai, account],
+      // })
+
       const data = JSON.stringify(_omit(scores, ['hash']))
       const hash = scores.hash
       console.log('call mint contract...', data, hash)
