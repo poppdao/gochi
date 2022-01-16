@@ -5,7 +5,7 @@ const DATA = {
     "title": "Vote in DAO",
     "description": "Rank via vote numbers in Aavegotchi snapshot",
   },
-  gochi: {
+  gotchi: {
     "title": "Gotchi",
     "description": "Rank via Gotchi numbers",
   },
